@@ -6,12 +6,14 @@ public class playerController : MonoBehaviour {
 
     private bool collides = false;
     private Rigidbody2D playerRigidbody;
+    private Transform playerTransform;
     public int jumpingSpeed = 1;
-    
+    public int horizontalSpeed = 1;
+    private float movement = 0f;
 
 	void Start () {
         playerRigidbody = GetComponent<Rigidbody2D>();
-       
+        playerTransform = GetComponent<Transform>();
 	}
 
     void OnCollisionEnter2D(Collision2D col)
@@ -27,6 +29,9 @@ public class playerController : MonoBehaviour {
 
 
     void FixedUpdate() {
+
+        playerTransform.eulerAngles = new Vector2(playerTransform.eulerAngles.x, 0);
+
         if (Input.GetKeyDown("space")&&collides)
             playerRigidbody.AddForce(new Vector2(0, 1 * jumpingSpeed));
 
@@ -35,13 +40,22 @@ public class playerController : MonoBehaviour {
 
         }
 
-        
+        if (!collides) {
+            Vector2 velocity = playerRigidbody.velocity;
+            velocity.x = movement*horizontalSpeed;
+            playerRigidbody.velocity = velocity;
+
+        }
+
+
+
+
 
     }
 
     // Update is called once per frame
     void Update () {
-            
-        
-	}
+        movement = Input.GetAxis("Horizontal");
+
+    }
 }
