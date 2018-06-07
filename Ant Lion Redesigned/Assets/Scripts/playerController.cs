@@ -32,6 +32,9 @@ public class playerController : MonoBehaviour {
 
         playerTransform.eulerAngles = new Vector2(playerTransform.eulerAngles.x, 0);
 
+       
+
+
         if (Input.GetKeyDown("space") && collides) {
             playerRigidbody.AddForce(new Vector2(0, 1 * jumpingSpeed));
 
@@ -42,12 +45,17 @@ public class playerController : MonoBehaviour {
 
         }
 
-        if (!collides) {
-            Vector2 velocity = playerRigidbody.velocity;
-            velocity.x = movement*horizontalSpeed;
-            playerRigidbody.velocity = velocity;
+        if (!collides)
+            horizontalSpeed = 5;
+        else
+            horizontalSpeed = 1;
 
-        }//WALKING SCRIPT TO BE ADDED HERE
+        
+        Vector2 velocity = playerRigidbody.velocity;
+        velocity.x = movement*horizontalSpeed;
+        playerRigidbody.velocity = velocity;
+
+        
 
 
 
@@ -55,7 +63,7 @@ public class playerController : MonoBehaviour {
 
     }
 
-    // Update is called once per frame
+    
     void Update () {
         movement = Input.GetAxis("Horizontal");
 
