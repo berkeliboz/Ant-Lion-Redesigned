@@ -31,8 +31,19 @@ public class playerController : MonoBehaviour {
     void FixedUpdate() {
 
         playerTransform.eulerAngles = new Vector2(playerTransform.eulerAngles.x, 0);
+        playerRigidbody.freezeRotation = true;
+        
 
-       
+        if (playerTransform.position.x >= 3) {
+            playerTransform.position = new Vector2(-3, playerTransform.position.y);
+        }
+
+        if (playerTransform.position.x < -3)
+        {
+           playerTransform.position = new Vector2(2.8f, playerTransform.position.y);
+        }
+
+
 
 
         if (Input.GetKeyDown("space") && collides) {
@@ -55,15 +66,14 @@ public class playerController : MonoBehaviour {
         velocity.x = movement*horizontalSpeed;
         playerRigidbody.velocity = velocity;
 
+
+
+
+
         
-
-
-
-
-
     }
 
-    
+
     void Update () {
         movement = Input.GetAxis("Horizontal");
 

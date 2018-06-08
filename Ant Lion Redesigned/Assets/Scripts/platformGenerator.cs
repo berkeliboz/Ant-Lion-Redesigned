@@ -23,7 +23,7 @@ public class platformGenerator : MonoBehaviour {
     }
 
     public string randPlatformChooser() {
-        return Random.Range(0,3).ToString();
+        return Random.Range(0, 5).ToString();
     }
 
     public float randPlatformXLocation() {
