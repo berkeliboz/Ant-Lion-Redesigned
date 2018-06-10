@@ -19,7 +19,7 @@ public class horizontalPlatformMovement : MonoBehaviour {
 	void Update () {
         obj.transform.position = new Vector2(Mathf.Sin(counter * (speed/100)) *range, obj.transform.position.y);
         counter++;
-       
+           
     }
 
     int randomSpeedGenerator() {

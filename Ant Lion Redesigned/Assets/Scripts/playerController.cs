@@ -14,7 +14,10 @@ public class playerController : MonoBehaviour {
 	void Start () {
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerTransform = GetComponent<Transform>();
-	}
+
+        
+
+    }
 
     void OnCollisionEnter2D(Collision2D col)
     {
@@ -48,6 +51,7 @@ public class playerController : MonoBehaviour {
 
         if (Input.GetKeyDown("space") && collides) {
             playerRigidbody.AddForce(new Vector2(0, 1 * jumpingSpeed));
+           
 
         }
 
