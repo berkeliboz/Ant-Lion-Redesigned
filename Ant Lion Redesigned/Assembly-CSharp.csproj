@@ -62,12 +62,6 @@
     <Compile Include="Assets\Scripts\cameraScript.cs" />
     <Compile Include="Assets\Scripts\platformGenerator.cs" />
     <Compile Include="Assets\Scripts\playerController.cs" />
-    <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/curti/Documents/Ant-Lion-Redesigned/Ant Lion Redesigned/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/curti/Documents/Ant-Lion-Redesigned/Ant Lion Redesigned/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
     </Reference>
