@@ -23,6 +23,9 @@ public class playerController : MonoBehaviour {
     {
         if(col.collider.tag == "platform")
            collides = true;
+
+        if (col.collider.tag == "powerupJump")
+            playerRigidbody.AddForce(new Vector2(0, 3 * jumpingSpeed));
     }
 
     void OnCollisionExit2D(Collision2D other) {
