@@ -1,6 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ant Lion Redesigned", "Assembly-CSharp.csproj", "{DF577CE2-7434-6844-D2FA-78408BEEC961}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
