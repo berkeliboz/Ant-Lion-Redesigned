@@ -1,4 +1,12 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/TestScene.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scenes/MainMenu.unity
+=======
+- path: Assets/Scenes/Inventory.unity
+>>>>>>> refs/remotes/origin/Curtis
+>>>>>>> refs/remotes/origin/master
   isLoaded: 1
   isActive: 1
