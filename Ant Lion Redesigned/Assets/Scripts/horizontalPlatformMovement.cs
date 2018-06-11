@@ -17,13 +17,13 @@ public class horizontalPlatformMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        obj.transform.position = new Vector2(Mathf.Sin(counter * (speed/100)) *range, obj.transform.position.y);
+        obj.transform.position = new Vector2(Mathf.Sin(counter * (randomSpeedGenerator() / 100)) *range, obj.transform.position.y);
         counter++;
            
     }
 
     int randomSpeedGenerator() {
-        return Random.Range(0, 16);
+        return Random.Range(0, 10);
     }
 
     float randomRangeGenerator() {
