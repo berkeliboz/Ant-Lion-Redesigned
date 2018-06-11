@@ -1,21 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class playerController : MonoBehaviour {
 
     public bool collides = false;
     private Rigidbody2D playerRigidbody;
     private Transform playerTransform;
-    public int jumpingSpeed = 1;
+    public float jumpingSpeed = 1;
     public int horizontalSpeed = 1;
     private float movement = 0f;
-    
+    public Text debugger;
 
 	void Start () {
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerTransform = GetComponent<Transform>();
-
+        Screen.orientation = ScreenOrientation.Portrait;
         
 
     }
@@ -35,8 +36,13 @@ public class playerController : MonoBehaviour {
     }
 
     bool handleTouch() {
-        return (Input.GetTouch(0).tapCount > 0) ? true : false;
-
+        try {
+            if(Input.GetTouch(0).tapCount > 0)
+                return true;
+        }
+        catch {
+            }
+        return false;
     }
 
     void FixedUpdate() {
@@ -69,17 +75,16 @@ public class playerController : MonoBehaviour {
         }
 
         if (!collides)
-            horizontalSpeed = 5;
+            horizontalSpeed = 1;
         else
             horizontalSpeed = 1;
 
         
         Vector2 velocity = playerRigidbody.velocity;
         velocity.x = movement*horizontalSpeed;
+        
         playerRigidbody.velocity = velocity;
-
-
-
+        
 
 
         
@@ -88,8 +93,8 @@ public class playerController : MonoBehaviour {
 
     void Update () {
         //movement = Input.GetAxis("Horizontal");
-        movement = Input.acceleration.x;
+        movement = Input.acceleration.x*5;
+        debugger.text = Input.acceleration.x.ToString();
 
-        
     }
 }

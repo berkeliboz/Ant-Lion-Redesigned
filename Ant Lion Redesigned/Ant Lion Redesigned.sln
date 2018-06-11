@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ant Lion Redesigned", "Assembly-CSharp.csproj", "{DF577CE2-7434-6844-D2FA-78408BEEC961}"
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ant Lion Redesigned.CSharp", "Ant Lion Redesigned.CSharp.csproj", "{01367498-BD52-C432-7055-B34730BAB4D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DF577CE2-7434-6844-D2FA-78408BEEC961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DF577CE2-7434-6844-D2FA-78408BEEC961}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DF577CE2-7434-6844-D2FA-78408BEEC961}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DF577CE2-7434-6844-D2FA-78408BEEC961}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01367498-BD52-C432-7055-B34730BAB4D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01367498-BD52-C432-7055-B34730BAB4D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01367498-BD52-C432-7055-B34730BAB4D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01367498-BD52-C432-7055-B34730BAB4D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
