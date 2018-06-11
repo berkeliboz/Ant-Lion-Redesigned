@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class playerController : MonoBehaviour {
 
-    private bool collides = false;
+    public bool collides = false;
     private Rigidbody2D playerRigidbody;
     private Transform playerTransform;
     public int jumpingSpeed = 1;
     public int horizontalSpeed = 1;
     private float movement = 0f;
+    
 
 	void Start () {
         playerRigidbody = GetComponent<Rigidbody2D>();
@@ -33,6 +34,10 @@ public class playerController : MonoBehaviour {
 
     }
 
+    bool handleTouch() {
+        return (Input.GetTouch(0).tapCount > 0) ? true : false;
+
+    }
 
     void FixedUpdate() {
 
@@ -52,7 +57,7 @@ public class playerController : MonoBehaviour {
 
 
 
-        if (Input.GetKeyDown("space") && collides) {
+        if ((Input.GetKeyDown("space")|| handleTouch()) && collides) {
             playerRigidbody.AddForce(new Vector2(0, 1 * jumpingSpeed));
            
 
@@ -82,7 +87,9 @@ public class playerController : MonoBehaviour {
 
 
     void Update () {
-        movement = Input.GetAxis("Horizontal");
+        //movement = Input.GetAxis("Horizontal");
+        movement = Input.acceleration.x;
 
+        
     }
 }
