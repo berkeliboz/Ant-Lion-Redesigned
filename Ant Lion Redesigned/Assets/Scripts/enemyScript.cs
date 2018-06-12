@@ -6,7 +6,7 @@ public class enemyScript : MonoBehaviour {
 
     private GameObject enemy;
     int counter = 0;
-    float speed = 0.01f;
+    public float speed = 0.01f;
     float range = 0.8f;
 	// Use this for initialization
 	void Start () {

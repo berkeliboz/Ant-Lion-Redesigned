@@ -14,3 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Inventory.unity
     guid: 34e7adde26ff3d248b95ad968bb17316
+  - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: f3144aea8c7581a4dbcfd3c22caf42e7
+  - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: 1af1614e7c683a340b042ebbaf23489d
