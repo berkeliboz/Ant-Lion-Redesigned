@@ -286,7 +286,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\cameraScript.cs" />
+    <Compile Include="Assets\Scripts\enemyScript.cs" />
+    <Compile Include="Assets\Scripts\globalState.cs" />
     <Compile Include="Assets\Scripts\horizontalPlatformMovement.cs" />
+    <Compile Include="Assets\Scripts\mainMenuScript.cs" />
     <Compile Include="Assets\Scripts\platformGenerator.cs" />
     <Compile Include="Assets\Scripts\playerController.cs" />
     <Compile Include="Assets\Scripts\powerupScript.cs" />

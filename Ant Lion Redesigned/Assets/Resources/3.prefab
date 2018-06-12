@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 4191420972270640}
   - component: {fileID: 212745883798443830}
   - component: {fileID: 58551013909748296}
+  - component: {fileID: 114769647713454942}
   m_Layer: 0
   m_Name: img_571231
   m_TagString: Untagged
@@ -183,6 +184,17 @@ EdgeCollider2D:
   m_Points:
   - {x: -1.7140619, y: 0.4305245}
   - {x: 1.6297778, y: 0.41578606}
+--- !u!114 &114769647713454942
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1114029381684800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96f552796e1f30c43b4c7649bc74e658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212030542968557284
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -196,7 +208,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -241,7 +252,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -286,7 +296,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
