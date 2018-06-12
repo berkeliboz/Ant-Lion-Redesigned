@@ -8,25 +8,49 @@ public class horizontalPlatformMovement : MonoBehaviour {
     public float counter = 0;
     public float range = 0.5f;
     public float speed = 10;
-	// Use this for initialization
-	void Start () {
+
+    private GameObject stateObj;
+    private globalState state;
+
+
+    void Start () {
         obj = this.gameObject;
-        speed = randomSpeedGenerator();
-        range = randomRangeGenerator();
+
+        stateObj = GameObject.Find("GlobalState");
+        state = stateObj.GetComponent<globalState>();
+
+
+
+        randomSpeedGenerator();
+        
+        
+
     }
 	
-	// Update is called once per frame
+
 	void Update () {
         obj.transform.position = new Vector2(Mathf.Sin(counter * (speed/ 1000)) *range, obj.transform.position.y);
         counter++;
-        
-        
-
-
+ 
     }
 
-    float randomSpeedGenerator() {
-        return ((float)Random.Range(0, 10) )/ 10;
+    void randomSpeedGenerator() {
+
+        if (state.difficulty == globalState.Difficulty.EASY)
+        {
+            speed = 10;
+            range = 0.5F;
+        }
+        else if (state.difficulty == globalState.Difficulty.MEDIUM)
+        {
+            speed = 50;
+            range = 1F;
+        }
+        else if (state.difficulty == globalState.Difficulty.HARD)
+        {
+            speed = 100;
+            range = 2F;
+        }
     }
 
     float randomRangeGenerator() {

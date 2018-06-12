@@ -1,6 +1,9 @@
 Android
 SceneListBegin?
+Assets/Scenes/MainMenu.unity
 Assets/Scenes/TestScene.unity
+Assets/Scenes/Inventory.unity
+Assets/Scenes/Level 1.unity
 SceneListEnd?
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.powerupScript
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
@@ -113,9 +116,11 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
-c3fca9a1d55b7b92f683db00170c0b3b Assembly-CSharp.dll:.playerController
+341fdd202c20d9798d9ad8ec4eb602b7 Assembly-CSharp.dll:.playerController
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
+3b2fea63a9cc5c42f5e44a682be9e7dd Assembly-CSharp.dll:.mainMenuScript
+dd5481137759597d614818793c90a7fe Assembly-CSharp.dll:.enemyScript
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 60b2bb652410a5867a5ab9a01cd38461 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -144,3 +149,4 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 365b1fb07de5832120546378b97b1cbb Assembly-CSharp.dll:.horizontalPlatformMovement
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.cameraScript
+786d4bf699526228f41a51db9a1571e8 Assembly-CSharp.dll:.globalState
