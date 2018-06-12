@@ -11,6 +11,7 @@ public class platformGenerator : MonoBehaviour {
     ArrayList platformList = new ArrayList();
 
 
+
 	void Start () {
         basePlatform = this.gameObject;
 
@@ -18,7 +19,7 @@ public class platformGenerator : MonoBehaviour {
         {
             Vector2 oldPos = new Vector2(basePlatform.transform.position.x + randPlatformXLocation(), basePlatform.transform.position.y + 2*(i+ platformDistance));
             GameObject newPlatform = Instantiate(Resources.Load(randPlatformChooser()), oldPos , basePlatform.transform.rotation) as GameObject;
-            platformList.Add(newPlatform); //Not used
+            platformList.Add(newPlatform); //Not used 
         }
     }
 

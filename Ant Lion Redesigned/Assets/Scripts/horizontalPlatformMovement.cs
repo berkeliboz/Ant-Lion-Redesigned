@@ -11,23 +11,26 @@ public class horizontalPlatformMovement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         obj = this.gameObject;
-        speed = 10;
+        speed = randomSpeedGenerator();
         range = randomRangeGenerator();
     }
 	
 	// Update is called once per frame
 	void Update () {
-        obj.transform.position = new Vector2(Mathf.Sin(counter * (randomSpeedGenerator() / 100)) *range, obj.transform.position.y);
+        obj.transform.position = new Vector2(Mathf.Sin(counter * (speed/ 1000)) *range, obj.transform.position.y);
         counter++;
-           
+        
+        
+
+
     }
 
-    int randomSpeedGenerator() {
-        return Random.Range(0, 10);
+    float randomSpeedGenerator() {
+        return ((float)Random.Range(0, 10) )/ 10;
     }
 
     float randomRangeGenerator() {
-        return (float)(Random.Range(0,21)-10)/5;
+        return (float)(Random.Range(0,21))/5;
     }
 
 }

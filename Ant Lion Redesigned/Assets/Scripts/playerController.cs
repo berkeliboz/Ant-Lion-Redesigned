@@ -9,11 +9,18 @@ public class playerController : MonoBehaviour {
     private Rigidbody2D playerRigidbody;
     private Transform playerTransform;
     public float jumpingSpeed = 1;
-    public int horizontalSpeed = 1;
+    public float horizontalSpeed = 1f;
     private float movement = 0f;
     public Text debugger;
 
+    public Sprite[] skins;                                      //Attach skins here !!!
+
+    public int counter = 0;
+
+    private SpriteRenderer srComp;                              //Sprite Renderer here !!!
+
 	void Start () {
+        srComp = this.GetComponent<SpriteRenderer>();
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerTransform = GetComponent<Transform>();
         Screen.orientation = ScreenOrientation.Portrait;
@@ -65,7 +72,7 @@ public class playerController : MonoBehaviour {
 
         if ((Input.GetKeyDown("space")|| handleTouch()) && collides) {
             playerRigidbody.AddForce(new Vector2(0, 1 * jumpingSpeed));
-           
+        
 
         }
 
@@ -77,7 +84,7 @@ public class playerController : MonoBehaviour {
         if (!collides)
             horizontalSpeed = 1;
         else
-            horizontalSpeed = 1;
+            horizontalSpeed = 0.5f;
 
         
         Vector2 velocity = playerRigidbody.velocity;
@@ -92,9 +99,11 @@ public class playerController : MonoBehaviour {
 
 
     void Update () {
-        //movement = Input.GetAxis("Horizontal");
-        movement = Input.acceleration.x*5;
+        //movement = Input.GetAxis("Horizontal");                           //Uncomment this line for PC input
+        movement = Input.acceleration.x*5;                                  //Uncomment this line for Android input
         debugger.text = Input.acceleration.x.ToString();
+
+       
 
     }
 }
