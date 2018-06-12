@@ -4,6 +4,7 @@ Assets/Scenes/MainMenu.unity
 Assets/Scenes/TestScene.unity
 Assets/Scenes/Inventory.unity
 Assets/Scenes/Level 1.unity
+Assets/Scenes/Level 2.unity
 SceneListEnd?
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.powerupScript
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
