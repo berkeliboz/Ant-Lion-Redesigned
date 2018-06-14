@@ -25,14 +25,16 @@ public class platformGenerator : MonoBehaviour {
             Vector2 oldPos = new Vector2(basePlatform.transform.position.x + randPlatformXLocation(), basePlatform.transform.position.y + 2*(i+ platformDistance));
             GameObject newPlatform = Instantiate(Resources.Load(randPlatformChooser()), oldPos , basePlatform.transform.rotation) as GameObject;
             platformList.Add(newPlatform); //Not used 
-        }
+            if (i == lenght - 1) {
+                newPlatform = Instantiate(Resources.Load("levelEnd"), oldPos, basePlatform.transform.rotation) as GameObject;
+    }
+
+}
     }
 
     public string randPlatformChooser() {
         int lvl = state.level.ToString()[3]-48;         //This line of code will crush after level9 is added!!
-        Debug.Log(lvl);
-        return Random.Range(0,  lvl+3).ToString();
-            
+        return Random.Range(0,  lvl+3).ToString();       
     }
         
 

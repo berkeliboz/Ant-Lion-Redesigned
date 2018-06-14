@@ -285,10 +285,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\antlionCode.cs" />
     <Compile Include="Assets\Scripts\cameraScript.cs" />
+    <Compile Include="Assets\Scripts\clothingScript.cs" />
+    <Compile Include="Assets\Scripts\customizationScreenButton.cs" />
+    <Compile Include="Assets\Scripts\endLevelScript.cs" />
     <Compile Include="Assets\Scripts\enemyScript.cs" />
     <Compile Include="Assets\Scripts\globalState.cs" />
     <Compile Include="Assets\Scripts\horizontalPlatformMovement.cs" />
+    <Compile Include="Assets\Scripts\hpCode.cs" />
     <Compile Include="Assets\Scripts\mainMenuScript.cs" />
     <Compile Include="Assets\Scripts\platformGenerator.cs" />
     <Compile Include="Assets\Scripts\playerController.cs" />
